@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Twitter, Youtube, Mail, Cube } from 'lucide-react';
+import { Twitter, Youtube, Mail, Box } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -73,7 +73,7 @@ const Contact = () => {
               className="w-12 h-12 rounded-full flex items-center justify-center border border-gold-500/30 hover:border-gold-500 hover:bg-black-800 transition-all group"
               aria-label="Roblox"
             >
-              <Cube className="w-5 h-5 text-gold-500 group-hover:text-gold-400 transition-colors" />
+              <Box className="w-5 h-5 text-gold-500 group-hover:text-gold-400 transition-colors" />
             </a>
             <a 
               href="https://www.youtube.com/c/Junozy/featured" 
