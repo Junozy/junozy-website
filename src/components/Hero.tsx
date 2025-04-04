@@ -2,6 +2,13 @@
 import React from 'react';
 
 const Hero = () => {
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="relative h-screen flex items-center overflow-hidden">
       {/* Background gradient overlay */}
@@ -14,18 +21,24 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 animate-fade-in opacity-0" style={{animationDelay: "0.3s"}}>
-            <span className="gold-text">VIRTUAL</span> <span className="text-white">ELEGANCE</span>
-          </h1>
+          <img 
+            src="/images/junozy-logo.png" 
+            alt="JUNOZY" 
+            className="w-full max-w-lg mb-6 animate-fade-in opacity-0" 
+            style={{animationDelay: "0.3s"}}
+          />
           
           <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl animate-fade-up opacity-0" style={{animationDelay: "0.6s"}}>
             Redefining luxury fashion in the digital realm. Junozy creates exquisite virtual garments crafted at the intersection of haute couture and technology.
           </p>
           
           <div className="animate-fade-up opacity-0" style={{animationDelay: "0.9s"}}>
-            <a href="#collections" className="gold-button rounded-sm">
-              Explore Collections
-            </a>
+            <button 
+              onClick={() => handleScroll('featured-creations')} 
+              className="gold-button rounded-sm"
+            >
+              Explore Creations
+            </button>
           </div>
         </div>
       </div>

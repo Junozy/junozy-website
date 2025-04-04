@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
+import { Twitter, Youtube, Mail, Gamepad2 } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -47,6 +48,44 @@ const Contact = () => {
             Interested in commissioning a custom digital piece or collaborating with Junozy? 
             We'd love to hear from you.
           </p>
+          
+          {/* Social Media Links */}
+          <div className="flex justify-center space-x-6 mt-8">
+            <a 
+              href="https://x.com/Junozy_" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full flex items-center justify-center border border-gold-500/30 hover:border-gold-500 hover:bg-black-800 transition-all group"
+              aria-label="Twitter"
+            >
+              <Twitter className="w-5 h-5 text-gold-500 group-hover:text-gold-400 transition-colors" />
+            </a>
+            <a 
+              href="https://www.roblox.com/users/32958887/profile" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full flex items-center justify-center border border-gold-500/30 hover:border-gold-500 hover:bg-black-800 transition-all group"
+              aria-label="Roblox"
+            >
+              <Gamepad2 className="w-5 h-5 text-gold-500 group-hover:text-gold-400 transition-colors" />
+            </a>
+            <a 
+              href="https://www.youtube.com/c/Junozy/featured" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full flex items-center justify-center border border-gold-500/30 hover:border-gold-500 hover:bg-black-800 transition-all group"
+              aria-label="YouTube"
+            >
+              <Youtube className="w-5 h-5 text-gold-500 group-hover:text-gold-400 transition-colors" />
+            </a>
+            <a 
+              href="mailto:junozy.business@gmail.com" 
+              className="w-12 h-12 rounded-full flex items-center justify-center border border-gold-500/30 hover:border-gold-500 hover:bg-black-800 transition-all group"
+              aria-label="Email"
+            >
+              <Mail className="w-5 h-5 text-gold-500 group-hover:text-gold-400 transition-colors" />
+            </a>
+          </div>
         </div>
         
         <div className="max-w-3xl mx-auto">

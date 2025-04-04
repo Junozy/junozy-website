@@ -19,15 +19,25 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <nav 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12",
-        isScrolled ? "py-4 bg-black-900/90 backdrop-blur-md" : "py-6 bg-transparent"
+        isScrolled ? "py-3 bg-black-900/90 backdrop-blur-md" : "py-5 bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="/" className="text-2xl md:text-3xl font-serif gold-text font-bold">JUNOZY</a>
+        <a href="/" className="flex items-center">
+          <img src="/images/junozy-logo.png" alt="JUNOZY" className="h-10 md:h-12" />
+        </a>
         
         {/* Mobile menu button */}
         <button 
@@ -41,36 +51,48 @@ const Navbar = () => {
         
         {/* Desktop menu */}
         <div className="hidden md:flex space-x-8">
-          <a href="#collections" className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors">Collections</a>
-          <a href="#about" className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors">About</a>
-          <a href="#contact" className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors">Contact</a>
+          <button 
+            onClick={() => handleNavClick('featured-creations')} 
+            className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors"
+          >
+            Creations
+          </button>
+          <button 
+            onClick={() => handleNavClick('brand-partners')} 
+            className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors"
+          >
+            Partners
+          </button>
+          <button 
+            onClick={() => handleNavClick('contact')} 
+            className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors"
+          >
+            Contact
+          </button>
         </div>
       </div>
       
       {/* Mobile menu */}
       <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMenuOpen ? 'max-h-60 opacity-100 py-4' : 'max-h-0 opacity-0'}`}>
         <div className="flex flex-col space-y-4 px-4">
-          <a 
-            href="#collections" 
+          <button 
+            onClick={() => handleNavClick('featured-creations')} 
             className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors"
-            onClick={() => setIsMenuOpen(false)}
           >
-            Collections
-          </a>
-          <a 
-            href="#about" 
+            Creations
+          </button>
+          <button 
+            onClick={() => handleNavClick('brand-partners')} 
             className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors"
-            onClick={() => setIsMenuOpen(false)}
           >
-            About
-          </a>
-          <a 
-            href="#contact" 
+            Partners
+          </button>
+          <button 
+            onClick={() => handleNavClick('contact')} 
             className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors"
-            onClick={() => setIsMenuOpen(false)}
           >
             Contact
-          </a>
+          </button>
         </div>
       </div>
     </nav>

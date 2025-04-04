@@ -3,17 +3,19 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Collections from '@/components/Collections';
-import About from '@/components/About';
+import BrandPartners from '@/components/BrandPartners';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import FloatingElements from '@/components/FloatingElements';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-black-950">
+      <FloatingElements />
       <Navbar />
       <Hero />
       <Collections />
-      <About />
+      <BrandPartners />
       <Contact />
       <Footer />
     </div>

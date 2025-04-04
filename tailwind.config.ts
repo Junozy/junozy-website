@@ -30,12 +30,12 @@ export default {
 					100: '#FFF0BF',
 					200: '#FFE799',
 					300: '#FFDE70',
-					400: '#FFD54D',
-					500: '#FFCC29', // Primary gold
-					600: '#FFBF00',
-					700: '#CC9900',
-					800: '#997300',
-					900: '#664D00',
+					400: '#FFDC73', // Updated to match the logo
+					500: '#E5A712', // Updated to match the logo
+					600: '#CC9900',
+					700: '#997300',
+					800: '#664D00',
+					900: '#332600',
 				},
 				black: {
 					950: '#000000', // Pure black
@@ -137,6 +137,14 @@ export default {
 						transform: 'translateX(100%)',
 					},
 				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)',
+					},
+					'50%': {
+						transform: 'translateY(-10px)',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -144,9 +152,10 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out forwards',
 				'fade-up': 'fade-up 0.7s ease-out forwards',
 				'shimmer': 'shimmer 2s infinite',
+				'float': 'float 6s ease-in-out infinite',
 			},
 			backgroundImage: {
-				'gold-gradient': 'linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)',
+				'gold-gradient': 'linear-gradient(to right, #E5A712, #FFDC73, #E5A712)', // Updated to match the logo
 			}
 		}
 	},
