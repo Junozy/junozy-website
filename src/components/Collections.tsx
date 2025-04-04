@@ -1,43 +1,59 @@
 
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 type Creation = {
   id: number;
   title: string;
   sales: string;
+  created: string;
   image: string;
-  featured: boolean;
+  link: string;
+  note?: string;
 };
 
 const CREATIONS: Creation[] = [
   {
     id: 1,
-    title: "Hide or Die!",
-    sales: "231.1M visits · 7,438 active players",
-    image: "https://images.unsplash.com/photo-1531053270060-6643c9e70715?q=80&w=1974&auto=format&fit=crop",
-    featured: true,
+    title: "Strawberry Cow Hood",
+    sales: "1,300,000+",
+    created: "2020",
+    image: "https://tr.rbxcdn.com/a65fe330c7f2fdbae6d82b56a332c063/420/420/Hat/Png",
+    link: "https://www.roblox.com/catalog/5355719986/Strawberry-Cow-Hood"
   },
   {
     id: 2,
-    title: "Dead Sails [FISHING]",
-    sales: "12M visits · 3,594 active players",
-    image: "https://images.unsplash.com/photo-1544365558-35aa4afcf11f?q=80&w=1936&auto=format&fit=crop",
-    featured: true,
+    title: "Blonde Popular Shoulder Braids",
+    sales: "1,350,000+",
+    created: "2021",
+    image: "https://tr.rbxcdn.com/0c5f0d0c1b6f9e1a1fe95d8137ce7b0e/420/420/Hat/Png",
+    link: "https://www.roblox.com/catalog/7062036000/Blonde-Popular-Shoulder-Braids"
   },
   {
     id: 3,
-    title: "BATHE DA BABY",
-    sales: "191.7M visits · 1,635 active players",
-    image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1950&auto=format&fit=crop",
-    featured: true,
+    title: "White Luxury Heart Purse",
+    sales: "1,000,000+",
+    created: "2022",
+    image: "https://tr.rbxcdn.com/3658f330b68894338f8e4593cbe6d5c3/420/420/Hat/Png",
+    link: "https://www.roblox.com/catalog/5355719986/Strawberry-Cow-Hood"
   },
   {
     id: 4,
-    title: "Zombies RNG!",
-    sales: "8.1M visits · 1,580 active players",
-    image: "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?q=80&w=1470&auto=format&fit=crop",
-    featured: true,
+    title: "Luxury 1/1 Gold Bling",
+    sales: "1",
+    created: "2023",
+    image: "https://tr.rbxcdn.com/c8b8221d0e86e21c3b1474f5b1c06c8a/420/420/Hat/Png",
+    link: "https://www.roblox.com/catalog/14835081494/Luxury-1-1-Gold-Bling",
+    note: "ONLY 1 IN EXISTENCE"
+  },
+  {
+    id: 5,
+    title: "Black Baggy Cargo Pants w/ Shoes & Straps",
+    sales: "TRENDING NOW",
+    created: "2024",
+    image: "https://tr.rbxcdn.com/d935097b9caf05635e056861b2c56b47/420/420/Hat/Png",
+    link: "https://www.roblox.com/catalog/73475435911852/Black-Baggy-Cargo-Pants-w-Shoes-Straps"
   }
 ];
 
@@ -45,8 +61,14 @@ const Collections = () => {
   const [hovered, setHovered] = useState<number | null>(null);
   
   return (
-    <section id="featured-creations" className="py-24 bg-black-900">
-      <div className="container mx-auto px-6">
+    <section id="featured-creations" className="py-24 bg-black-950 relative">
+      {/* Gold liquid gradient background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute bottom-1/4 left-1/4 w-[30%] h-[40%] rounded-full blur-[120px] bg-gold-500/5 animate-float" style={{animationDuration: "18s"}}></div>
+        <div className="absolute top-1/3 right-1/4 w-[25%] h-[35%] rounded-full blur-[100px] bg-gold-500/5 animate-float" style={{animationDuration: "15s", animationDelay: "3s"}}></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-6">
             <span className="gold-text">Featured</span> <span className="text-white">Creations</span>
@@ -54,49 +76,68 @@ const Collections = () => {
           <div className="w-20 h-1 bg-gold-gradient mx-auto"></div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
           {CREATIONS.map((creation) => (
-            <div 
+            <a 
               key={creation.id}
-              className="group relative overflow-hidden rounded-lg"
+              href={creation.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block bg-black-900 border border-gold-500/10 hover:border-gold-500/50 rounded-xl overflow-hidden transition-all duration-300 h-full"
               onMouseEnter={() => setHovered(creation.id)}
               onMouseLeave={() => setHovered(null)}
             >
-              <div 
-                className="absolute inset-0 bg-black-950/30 group-hover:bg-black-950/10 transition-all duration-500 z-10"
-              ></div>
-              
-              <img 
-                src={creation.image} 
-                alt={creation.title} 
-                className={cn(
-                  "w-full h-[500px] object-cover transition-all duration-700 ease-in-out",
-                  hovered === creation.id ? "scale-105" : ""
+              <div className="relative overflow-hidden">
+                <AspectRatio ratio={1} className="bg-black-900">
+                  <img 
+                    src={creation.image} 
+                    alt={creation.title} 
+                    className={cn(
+                      "w-full h-full object-contain transition-all duration-500 ease-out p-2",
+                      hovered === creation.id ? "scale-110 rotate-3" : ""
+                    )}
+                  />
+                </AspectRatio>
+                
+                {/* Hover overlay */}
+                <div className={cn(
+                  "absolute inset-0 bg-gradient-to-t from-black-950 to-transparent opacity-0 transition-opacity duration-300",
+                  hovered === creation.id ? "opacity-80" : ""
+                )}></div>
+                
+                {/* Special note for exclusive items */}
+                {creation.note && (
+                  <div className="absolute top-2 right-2 bg-gold-500 text-black-950 text-xs font-bold px-2 py-1 rounded-sm">
+                    {creation.note}
+                  </div>
                 )}
-              />
-              
-              {/* Gold border overlay that appears on hover */}
-              <div className={cn(
-                "absolute inset-4 border border-gold-500/0 transition-all duration-500 z-20",
-                hovered === creation.id ? "border-gold-500/80" : ""
-              )}></div>
-              
-              <div className="absolute inset-0 flex flex-col justify-end p-8 z-30">
-                <h3 className="text-2xl md:text-3xl font-serif text-white mb-2">{creation.title}</h3>
-                <p className="text-gold-500 mb-5">
-                  {creation.sales}
-                </p>
-                <a 
-                  href="#" 
-                  className={cn(
-                    "inline-block text-sm uppercase tracking-wider text-gold-500 border-b border-gold-500/0 transition-all duration-300 w-fit",
-                    hovered === creation.id ? "border-gold-500" : ""
-                  )}
-                >
-                  Explore Creation
-                </a>
               </div>
-            </div>
+              
+              <div className="p-4">
+                <h3 className="text-white font-medium text-lg mb-1 line-clamp-1">{creation.title}</h3>
+                
+                <div className="flex flex-col text-sm space-y-1">
+                  <div className="flex justify-between">
+                    <span className="text-white/60">Sales:</span>
+                    <span className="text-gold-500 font-medium">{creation.sales}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-white/60">Created:</span>
+                    <span className="text-white">{creation.created}</span>
+                  </div>
+                </div>
+                
+                {/* View button that appears on hover */}
+                <div className={cn(
+                  "mt-3 text-center transition-all duration-300 transform",
+                  hovered === creation.id ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+                )}>
+                  <span className="inline-block text-sm text-gold-500 hover:text-gold-400 border-b border-gold-500 pb-0.5">
+                    View on Roblox
+                  </span>
+                </div>
+              </div>
+            </a>
           ))}
         </div>
       </div>

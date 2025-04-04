@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Twitter, Youtube, Mail, Gamepad2 } from 'lucide-react';
+import { Twitter, Youtube, Mail, Cube } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -35,11 +35,17 @@ const Contact = () => {
   };
   
   return (
-    <section id="contact" className="py-24 bg-black-900 relative">
+    <section id="contact" className="py-24 bg-black-950 relative">
+      {/* Gold liquid gradient background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/3 -left-[10%] w-[35%] h-[45%] rounded-full blur-[120px] bg-gold-500/5 animate-float" style={{animationDuration: "18s"}}></div>
+        <div className="absolute bottom-1/4 -right-[10%] w-[40%] h-[40%] rounded-full blur-[100px] bg-gold-500/5 animate-float" style={{animationDuration: "15s", animationDelay: "3s"}}></div>
+      </div>
+      
       {/* Gold accent diagonal line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500 to-transparent opacity-30"></div>
       
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-6">
             <span className="gold-text">Connect</span> <span className="text-white">With Us</span>
@@ -67,7 +73,7 @@ const Contact = () => {
               className="w-12 h-12 rounded-full flex items-center justify-center border border-gold-500/30 hover:border-gold-500 hover:bg-black-800 transition-all group"
               aria-label="Roblox"
             >
-              <Gamepad2 className="w-5 h-5 text-gold-500 group-hover:text-gold-400 transition-colors" />
+              <Cube className="w-5 h-5 text-gold-500 group-hover:text-gold-400 transition-colors" />
             </a>
             <a 
               href="https://www.youtube.com/c/Junozy/featured" 
@@ -100,7 +106,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black-800 border border-black-700 focus:border-gold-500 text-white p-3 transition-colors outline-none"
+                  className="w-full bg-black-900 border border-black-800 focus:border-gold-500 text-white p-3 transition-colors outline-none rounded-sm"
                 />
               </div>
               
@@ -113,7 +119,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full bg-black-800 border border-black-700 focus:border-gold-500 text-white p-3 transition-colors outline-none"
+                  className="w-full bg-black-900 border border-black-800 focus:border-gold-500 text-white p-3 transition-colors outline-none rounded-sm"
                 />
               </div>
             </div>
@@ -127,7 +133,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 rows={6}
-                className="w-full bg-black-800 border border-black-700 focus:border-gold-500 text-white p-3 transition-colors outline-none resize-none"
+                className="w-full bg-black-900 border border-black-800 focus:border-gold-500 text-white p-3 transition-colors outline-none resize-none rounded-sm"
               ></textarea>
             </div>
             
@@ -136,12 +142,22 @@ const Contact = () => {
                 type="submit"
                 disabled={formStatus === 'submitting' || formStatus === 'success'}
                 className={cn(
-                  "gold-button min-w-[180px] relative overflow-hidden",
+                  "relative inline-block px-6 py-3 font-sans text-sm font-medium uppercase tracking-wider text-black-950 overflow-hidden group min-w-[180px]",
                   (formStatus === 'submitting' || formStatus === 'success') ? "opacity-90" : ""
                 )}
               >
+                {/* Animated gradient background */}
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 group-hover:bg-gradient-to-l transition-all duration-500 ease-out bg-[length:200%_100%] group-hover:duration-1000 animate-gradient-x"></span>
+                
+                {/* Glowing border effect */}
+                <span className="absolute inset-0 w-full h-full border border-gold-500/50 group-hover:border-gold-500 opacity-70 group-hover:opacity-100 scale-105 group-hover:scale-100 rounded-sm transition-all duration-500"></span>
+                
+                {/* Inner border animation */}
+                <span className="absolute inset-[3px] border border-gold-400/30 rounded-none group-hover:border-gold-400/80 scale-100 group-hover:scale-105 transition-all duration-500"></span>
+                
+                {/* Button states */}
                 <span className={cn(
-                  "inline-block transition-all duration-300",
+                  "relative text-black-950 group-hover:text-black-950 font-bold transition-all duration-300",
                   formStatus === 'submitting' ? "opacity-0" : formStatus === 'success' ? "opacity-0" : "opacity-100"
                 )}>
                   Send Message

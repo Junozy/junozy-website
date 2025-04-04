@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { Cube } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,7 +32,7 @@ const Navbar = () => {
     <nav 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-12",
-        isScrolled ? "py-3 bg-black-900/90 backdrop-blur-md" : "py-5 bg-transparent"
+        isScrolled ? "py-3 bg-black-950/90 backdrop-blur-md" : "py-5 bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -53,21 +54,27 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-8">
           <button 
             onClick={() => handleNavClick('featured-creations')} 
-            className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors"
+            className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors flex items-center"
           >
-            Creations
+            <span>Creations</span>
           </button>
           <button 
             onClick={() => handleNavClick('brand-partners')} 
-            className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors"
+            className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors flex items-center"
           >
-            Partners
+            <span>Partners</span>
+          </button>
+          <button 
+            onClick={() => handleNavClick('press')} 
+            className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors flex items-center"
+          >
+            <span>Press</span>
           </button>
           <button 
             onClick={() => handleNavClick('contact')} 
-            className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors"
+            className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors flex items-center"
           >
-            Contact
+            <span>Contact</span>
           </button>
         </div>
       </div>
@@ -86,6 +93,12 @@ const Navbar = () => {
             className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors"
           >
             Partners
+          </button>
+          <button 
+            onClick={() => handleNavClick('press')} 
+            className="text-white hover:text-gold-500 text-sm uppercase tracking-widest transition-colors"
+          >
+            Press
           </button>
           <button 
             onClick={() => handleNavClick('contact')} 

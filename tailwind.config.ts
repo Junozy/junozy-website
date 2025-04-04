@@ -145,6 +145,22 @@ export default {
 						transform: 'translateY(-10px)',
 					},
 				},
+				'marquee': {
+					'0%': { transform: 'translateX(0%)' },
+					'100%': { transform: 'translateX(-100%)' },
+				},
+				'marquee-reverse': {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(0%)' },
+				},
+				'gradient-x': {
+					'0%, 100%': {
+						'background-position': '0% 50%',
+					},
+					'50%': {
+						'background-position': '100% 50%',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -153,6 +169,9 @@ export default {
 				'fade-up': 'fade-up 0.7s ease-out forwards',
 				'shimmer': 'shimmer 2s infinite',
 				'float': 'float 6s ease-in-out infinite',
+				'marquee': 'marquee 40s linear infinite',
+				'marquee-reverse': 'marquee-reverse 40s linear infinite',
+				'gradient-x': 'gradient-x 3s ease infinite',
 			},
 			backgroundImage: {
 				'gold-gradient': 'linear-gradient(to right, #E5A712, #FFDC73, #E5A712)', // Updated to match the logo
