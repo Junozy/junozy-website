@@ -1,151 +1,36 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
-interface Particle {
-  x: number;
-  y: number;
-  size: number;
-  speedX: number;
-  speedY: number;
-  opacity: number;
-  rotation: number;
-  rotationSpeed: number;
-  sparkleType: number;
-  sparkleTime: number;
-  sparkleMax: number;
-}
-
-const FloatingElements: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const particlesRef = useRef<Particle[]>([]);
-  const sparkle1Ref = useRef<HTMLImageElement | null>(null);
-  const sparkle2Ref = useRef<HTMLImageElement | null>(null);
-  
-  useEffect(() => {
-    // Preload sparkle images
-    const sparkle1 = new Image();
-    sparkle1.src = '/lovable-uploads/9157df55-5c0c-4959-babc-1f109426001c.png'; // Hollow sparkle
-    sparkle1.onload = () => { sparkle1Ref.current = sparkle1; };
-    
-    const sparkle2 = new Image();
-    sparkle2.src = '/lovable-uploads/5fa604f8-ee76-448d-82f4-f4447881a34d.png'; // Filled sparkle
-    sparkle2.onload = () => { sparkle2Ref.current = sparkle2; };
-    
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    
-    // Set canvas to full screen
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-    
-    window.addEventListener('resize', handleResize);
-    handleResize();
-    
-    // Create particles
-    const createParticles = () => {
-      const particles: Particle[] = [];
-      const particleCount = Math.floor(window.innerWidth / 100); // Fewer particles for better performance
-      
-      for (let i = 0; i < particleCount; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          size: Math.random() * 25 + 15, // Larger sparkles
-          speedX: (Math.random() - 0.5) * 0.3,
-          speedY: (Math.random() - 0.5) * 0.3,
-          opacity: Math.random() * 0.5 + 0.2,
-          rotation: Math.random() * 360,
-          rotationSpeed: (Math.random() - 0.5) * 0.2,
-          sparkleType: Math.random() > 0.7 ? 1 : 0, // Alternate between sparkle types
-          sparkleTime: 0,
-          sparkleMax: Math.random() * 180 + 60 // Random time until sparkle effect
-        });
-      }
-      
-      return particles;
-    };
-    
-    particlesRef.current = createParticles();
-    
-    // Animation loop
-    let animationFrameId: number;
-    
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      particlesRef.current.forEach(particle => {
-        // Skip rendering if images aren't loaded yet
-        if (!sparkle1Ref.current || !sparkle2Ref.current) return;
-        
-        // Update position
-        particle.x += particle.speedX;
-        particle.y += particle.speedY;
-        particle.rotation += particle.rotationSpeed;
-        
-        // Update sparkle effect timer
-        particle.sparkleTime++;
-        if (particle.sparkleTime > particle.sparkleMax) {
-          particle.sparkleTime = 0;
-          particle.sparkleMax = Math.random() * 180 + 60;
-        }
-        
-        // Calculate sparkle effect
-        const isSparkleActive = particle.sparkleTime > particle.sparkleMax - 20;
-        const sparkleIntensity = isSparkleActive ? 
-          Math.sin((particle.sparkleTime - (particle.sparkleMax - 20)) / 20 * Math.PI) : 0;
-        
-        // Boundary check
-        if (particle.x < -50) particle.x = canvas.width + 50;
-        if (particle.x > canvas.width + 50) particle.x = -50;
-        if (particle.y < -50) particle.y = canvas.height + 50;
-        if (particle.y > canvas.height + 50) particle.y = -50;
-        
-        // Draw particle
-        ctx.save();
-        ctx.translate(particle.x, particle.y);
-        ctx.rotate(particle.rotation * Math.PI / 180);
-        
-        // Apply gold color tint
-        ctx.globalCompositeOperation = 'source-over';
-        ctx.globalAlpha = particle.opacity + (isSparkleActive ? sparkleIntensity * 0.5 : 0);
-        
-        // Scale for sparkle effect
-        const scale = 1 + (isSparkleActive ? sparkleIntensity * 0.2 : 0);
-        ctx.scale(scale, scale);
-        
-        // Choose sparkle image
-        const sparkleImg = particle.sparkleType === 0 ? sparkle1Ref.current : sparkle2Ref.current;
-        
-        // Draw the sparkle with gold tint
-        ctx.filter = 'sepia(1) saturate(5) hue-rotate(35deg)'; // Gold color filter
-        ctx.drawImage(sparkleImg, -particle.size/2, -particle.size/2, particle.size, particle.size);
-        ctx.filter = 'none';
-        
-        ctx.restore();
-      });
-      
-      animationFrameId = requestAnimationFrame(animate);
-    };
-    
-    animate();
-    
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, []);
-  
+const FloatingElements = () => {
   return (
-    <canvas 
-      ref={canvasRef} 
-      className="fixed inset-0 pointer-events-none z-5 opacity-40"
-      aria-hidden="true"
-    />
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+      {/* Gold sparkle elements */}
+      <div className="absolute top-[10%] left-[15%] animate-float opacity-70">
+        <div className="w-56 h-56 sparkle-animation">
+          <img src="/images/sparkle1.png" alt="" className="w-full h-full object-contain gold-filter" />
+        </div>
+      </div>
+      <div className="absolute top-[60%] right-[10%] animate-float opacity-60" style={{animationDelay: "1.2s"}}>
+        <div className="w-36 h-36 sparkle-animation" style={{animationDelay: "0.7s"}}>
+          <img src="/images/sparkle2.png" alt="" className="w-full h-full object-contain gold-filter" />
+        </div>
+      </div>
+      <div className="absolute top-[30%] right-[25%] animate-float-reverse opacity-40" style={{animationDelay: "0.7s"}}>
+        <div className="w-48 h-48 sparkle-animation" style={{animationDelay: "1.2s"}}>
+          <img src="/images/sparkle1.png" alt="" className="w-full h-full object-contain gold-filter" />
+        </div>
+      </div>
+      <div className="absolute bottom-[15%] left-[20%] animate-float-reverse opacity-50" style={{animationDelay: "1.5s"}}>
+        <div className="w-40 h-40 sparkle-animation" style={{animationDelay: "0.4s"}}>
+          <img src="/images/sparkle2.png" alt="" className="w-full h-full object-contain gold-filter" />
+        </div>
+      </div>
+      <div className="absolute top-[80%] right-[30%] animate-float opacity-30" style={{animationDelay: "2s"}}>
+        <div className="w-32 h-32 sparkle-animation" style={{animationDelay: "1.6s"}}>
+          <img src="/images/sparkle1.png" alt="" className="w-full h-full object-contain gold-filter" />
+        </div>
+      </div>
+    </div>
   );
 };
 
