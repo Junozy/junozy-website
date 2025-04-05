@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -83,6 +82,10 @@
   .gold-separator::after {
     content: '';
     @apply absolute left-0 right-0 h-px bg-gold-gradient opacity-80;
+  }
+  
+  .bg-gradient-radial {
+    background-image: radial-gradient(var(--tw-gradient-stops));
   }
 }
 

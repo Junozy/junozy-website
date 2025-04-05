@@ -17,9 +17,11 @@ const Index = () => {
       <Hero />
       <Collections />
       
-      {/* Gold separator line between Collections and Brand Partners */}
-      <div className="container mx-auto px-6">
-        <div className="h-px bg-gold-gradient opacity-70"></div>
+      {/* Full-width gold separator line between Collections and Brand Partners */}
+      <div className="w-full py-6">
+        <div className="container mx-auto px-6">
+          <div className="h-px bg-gold-gradient opacity-70"></div>
+        </div>
       </div>
       
       <BrandPartners />

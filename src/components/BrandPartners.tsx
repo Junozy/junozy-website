@@ -241,13 +241,18 @@ const BrandPartners = () => {
                     zIndex: zIndex
                   }}
                 >
-                  <div className="bg-black-900 border border-gold-500/30 rounded-lg overflow-hidden h-full shadow-xl">
-                    <div className="relative h-full">
-                      <img
-                        src={partner.image}
-                        alt={partner.name}
-                        className="w-full h-full object-cover"
-                      />
+                  <div className="bg-black-900/50 border border-gold-500/30 rounded-lg overflow-hidden h-full shadow-xl">
+                    <div className="relative w-full h-full">
+                      {/* Image with vignette overlay effect */}
+                      <div className="w-full h-full">
+                        <img
+                          src={partner.image}
+                          alt={partner.name}
+                          className="w-full h-full object-contain"
+                        />
+                        {/* Vignette overlay */}
+                        <div className="absolute inset-0 bg-gradient-radial from-transparent to-black/40 pointer-events-none"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -406,9 +411,6 @@ const BrandPartners = () => {
           <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black-950 to-transparent z-10"></div>
         </div>
       </div>
-      
-      {/* Separator line between sections - changed to gold gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gold-gradient opacity-50"></div>
     </section>
   );
 };
