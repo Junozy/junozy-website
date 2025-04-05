@@ -16,6 +16,12 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Collections />
+      
+      {/* Gold separator line between Collections and Brand Partners */}
+      <div className="container mx-auto px-6">
+        <div className="h-px bg-gold-gradient opacity-70"></div>
+      </div>
+      
       <BrandPartners />
       <Press />
       <Contact />

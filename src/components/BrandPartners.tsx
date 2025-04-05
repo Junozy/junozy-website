@@ -167,8 +167,10 @@ const BrandPartners = () => {
     <section id="brand-partners" className="py-24 bg-black-950 relative">
       {/* Gold liquid gradient background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-[35%] h-[40%] rounded-full blur-[120px] bg-gold-500/5 animate-blob" style={{animationDuration: "20s"}}></div>
-        <div className="absolute bottom-1/3 left-1/4 w-[30%] h-[35%] rounded-full blur-[100px] bg-gold-500/5 animate-blob" style={{animationDuration: "15s", animationDelay: "5s"}}></div>
+        <div className="absolute top-1/4 right-1/4 w-[45%] h-[50%] rounded-full blur-[120px] bg-gradient-to-br from-gold-500/15 to-gold-600/10 animate-blob" 
+             style={{animationDuration: "20s"}}></div>
+        <div className="absolute bottom-1/3 left-1/4 w-[40%] h-[45%] rounded-full blur-[150px] bg-gradient-to-tl from-gold-400/8 to-gold-600/5 animate-blob" 
+             style={{animationDuration: "15s", animationDelay: "5s"}}></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
@@ -180,7 +182,7 @@ const BrandPartners = () => {
         </div>
         
         {/* Partners Carousel */}
-        <div className="relative h-[400px] mb-20">
+        <div className="relative h-[675px] mb-20">
           <div 
             ref={carouselRef}
             className="absolute w-full h-full overflow-hidden rounded-lg"
@@ -246,9 +248,6 @@ const BrandPartners = () => {
                         alt={partner.name}
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-black-950/60 flex items-center justify-center">
-                        <h3 className="text-4xl text-gold-500 font-serif font-bold">{partner.name}</h3>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -408,8 +407,8 @@ const BrandPartners = () => {
         </div>
       </div>
       
-      {/* Separator line between sections */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gold-gradient opacity-30"></div>
+      {/* Separator line between sections - changed to gold gradient */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gold-gradient opacity-50"></div>
     </section>
   );
 };

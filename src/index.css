@@ -65,15 +65,24 @@
   }
 
   .gold-glow {
-    @apply shadow-[0_0_10px_rgba(255,204,41,0.5)];
+    @apply shadow-[0_0_15px_rgba(255,204,41,0.6)];
   }
   
   .shimmer-effect {
-    @apply relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-shimmer;
+    @apply relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:animate-shimmer;
   }
   
   .perspective-1000 {
     perspective: 1000px;
+  }
+
+  .gold-separator {
+    @apply relative py-8 my-8;
+  }
+
+  .gold-separator::after {
+    content: '';
+    @apply absolute left-0 right-0 h-px bg-gold-gradient opacity-80;
   }
 }
 
@@ -118,10 +127,24 @@
     opacity: 0.4;
   }
   50% {
-    opacity: 0.8;
+    opacity: 1;
   }
   100% {
     opacity: 0.4;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
   }
 }
 
@@ -157,6 +180,21 @@
   }
 }
 
+@keyframes sparkle {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
 .animate-marquee {
   animation: marquee 40s linear infinite;
 }
@@ -187,4 +225,26 @@
 
 .animate-float-reverse {
   animation: float 6s ease-in-out infinite reverse;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Improved gold filter for logo and sparkles */
+.gold-filter {
+  filter: brightness(1.2) sepia(0.3) hue-rotate(10deg) saturate(1.5);
+}
+
+/* Additional backdrop blur effect for depth */
+.backdrop-blur-gold {
+  backdrop-filter: blur(8px) brightness(1.5) sepia(0.2);
 }
