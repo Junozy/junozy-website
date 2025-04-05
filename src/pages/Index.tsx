@@ -19,7 +19,7 @@ const Index = () => {
       
       {/* Full-width gold separator line between Collections and Brand Partners */}
       <div className="w-full">
-        <div className="h-px bg-gold-gradient"></div>
+        <div className="h-[0.5px] bg-gold-gradient"></div>
       </div>
       
       <BrandPartners />
