@@ -19,7 +19,7 @@ const CREATIONS: Creation[] = [
     title: "Strawberry Cow Hood",
     sales: "1,300,000+",
     created: "2020",
-    image: "https://tr.rbxcdn.com/a65fe330c7f2fdbae6d82b56a332c063/420/420/Hat/Png",
+    image: "https://tr.rbxcdn.com/180DAY-0d3598cd3538501fc88e91de054c5bed/420/420/Hat/Webp/noFilter",
     link: "https://www.roblox.com/catalog/5355719986/Strawberry-Cow-Hood"
   },
   {
