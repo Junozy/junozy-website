@@ -123,7 +123,8 @@ const LOGO_BRANDS = [
   "Beats By Dre", "Mastercard", "FreshCut", "Walmart", "Care Bears", "Barbie", 
   "Singapore Changi Airport", "Sawhorse Productions", "Dubit", "Super League Gaming", 
   "The Gang Sweden", "GEEIQ", "Infinite Canvas", "Virtual Brand Group", "Exclusible", 
-  "Fullflower Studio", "Simple Games", "Offpath Games", "Catalog Avatar Creator", "Roblox"
+  "Fullflower Studio", "Simple Games", "Offpath Games", "Catalog Avatar Creator", "Roblox", 
+  "Warner Music", "Sony", "Paramount"
 ];
 
 // Group logos into sets of 3 for the triple-row carousel
