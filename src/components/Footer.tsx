@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
           <div className="object-scale-down">
             <a href="/" className="inline-block mb-6">
-              <img alt="JUNOZY" className="h-12" src="/lovable-uploads/3291dfdd-e301-410e-a303-e4a6e498c7ec.png" />
+              <img alt="JUNOZY" src="/lovable-uploads/3291dfdd-e301-410e-a303-e4a6e498c7ec.png" className="h-12 px-[15px]" />
             </a>
             <p className="text-white/70 max-w-xs">
               Pushing the boundaries of digital fashion with bold ideas and creative freedom.
