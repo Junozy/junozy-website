@@ -17,7 +17,7 @@ const Footer = () => {
       
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16">
-          <div>
+          <div className="object-scale-down">
             <a href="/" className="inline-block mb-6">
               <img alt="JUNOZY" className="h-12" src="/lovable-uploads/3291dfdd-e301-410e-a303-e4a6e498c7ec.png" />
             </a>
