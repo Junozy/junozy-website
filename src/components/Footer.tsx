@@ -24,7 +24,7 @@ const Footer = () => {
               <img src="/images/junozy-logo.png" alt="JUNOZY" className="h-12" />
             </a>
             <p className="text-white/70 max-w-xs">
-              Redefining luxury fashion in the digital realm through artistry and innovation.
+              Pushing the boundaries of digital fashion with bold ideas and creative freedom.
             </p>
           </div>
           
@@ -45,6 +45,14 @@ const Footer = () => {
                   className="text-white/70 hover:text-gold-500 transition-colors"
                 >
                   Partners
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleScroll('press')}
+                  className="text-white/70 hover:text-gold-500 transition-colors"
+                >
+                  Press
                 </button>
               </li>
               <li>

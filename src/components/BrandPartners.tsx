@@ -14,42 +14,102 @@ const PARTNERS: Partner[] = [
   {
     id: 1,
     name: "Essence",
-    image: "https://images.unsplash.com/photo-1536766820879-059fec98ec0a?q=80&w=1974&auto=format&fit=crop"
+    image: "/lovable-uploads/a9798156-578b-4d7b-8a13-62978d6dc5b2.png"
   },
   {
     id: 2,
     name: "JADE",
-    image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1950&auto=format&fit=crop"
+    image: "/lovable-uploads/6bea946c-5f53-48af-ab93-2d12d0b3cd35.png"
   },
   {
     id: 3,
     name: "The Wild Robot",
-    image: "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?q=80&w=1470&auto=format&fit=crop"
+    image: "/lovable-uploads/f0e52323-f434-496b-a5f1-8ada9fe1c266.png"
   },
   {
     id: 4,
     name: "The Olympics",
-    image: "https://images.unsplash.com/photo-1544365558-35aa4afcf11f?q=80&w=1936&auto=format&fit=crop"
+    image: "/lovable-uploads/3f6f2183-b2f3-4fb0-b5e5-01575636490c.png"
   },
   {
     id: 5,
     name: "NLE Choppa",
-    image: "https://images.unsplash.com/photo-1531053270060-6643c9e70715?q=80&w=1974&auto=format&fit=crop"
+    image: "/lovable-uploads/24987cf4-fa58-4019-9e93-006ee1a4b9dd.png"
   },
   {
     id: 6,
     name: "The Hunger Games",
-    image: "https://images.unsplash.com/photo-1607083206968-13611e3d76db?q=80&w=2215&auto=format&fit=crop"
+    image: "/lovable-uploads/e90bacb4-6aeb-4a6e-809e-9fdfde88b855.png"
   },
   {
     id: 7,
     name: "The US Open",
-    image: "https://images.unsplash.com/photo-1531152919957-24eabf129fac?q=80&w=2670&auto=format&fit=crop"
+    image: "/lovable-uploads/f9dcd2cf-512a-4faf-9e0b-1ac626062bde.png"
   },
   {
     id: 8,
     name: "Paris Hilton",
-    image: "https://images.unsplash.com/photo-1585620385456-4759f9b5c7d9?q=80&w=2670&auto=format&fit=crop"
+    image: "/lovable-uploads/95a07612-6fda-4c2e-b038-750f983ec9e3.png"
+  },
+  {
+    id: 9,
+    name: "Imagine Dragons",
+    image: "/lovable-uploads/e3c5b19f-6879-4df9-872b-15eb5c26801e.png"
+  },
+  {
+    id: 10,
+    name: "NYX Cosmetics",
+    image: "/lovable-uploads/5912bf98-e3dd-4ce5-a53c-eadfa7edd30e.png"
+  },
+  {
+    id: 11,
+    name: "Urban Decay",
+    image: "/lovable-uploads/909ba671-346e-4c04-bfc8-160cb9512f38.png"
+  },
+  {
+    id: 12,
+    name: "Karlie Kloss",
+    image: "/lovable-uploads/a9bcca12-8d22-4780-8919-6739d9e9e077.png"
+  },
+  {
+    id: 13,
+    name: "Elton John",
+    image: "/lovable-uploads/ae2e28c8-403f-4edc-b57f-393716cb7159.png"
+  },
+  {
+    id: 14,
+    name: "Walmart",
+    image: "/lovable-uploads/f9e8a9d6-ce24-476f-bd6c-da3942cdd7e7.png"
+  },
+  {
+    id: 15,
+    name: "Hot Topic",
+    image: "/lovable-uploads/fddeeebf-c988-46a7-a24b-4b042095f4b5.png"
+  },
+  {
+    id: 16,
+    name: "Tommy Hilfiger",
+    image: "/lovable-uploads/b32b91e9-347a-4350-9234-377fd95af771.png"
+  },
+  {
+    id: 17,
+    name: "The Grammy Awards",
+    image: "/lovable-uploads/30257aae-5c5c-4d3f-9fd1-a3a1e10ba42e.png"
+  },
+  {
+    id: 18,
+    name: "Catalog Avatar Creator",
+    image: "/lovable-uploads/76343655-1d04-471c-aa2d-90c182c09e52.png"
+  },
+  {
+    id: 19,
+    name: "Samsung",
+    image: "/lovable-uploads/fd060f58-b583-4c80-ab2d-6f89b001930f.png"
+  },
+  {
+    id: 20,
+    name: "NCT 127",
+    image: "/lovable-uploads/cdf524fb-0180-4aa7-a3c3-62f6339d3d7a.png"
   }
 ];
 
@@ -107,8 +167,8 @@ const BrandPartners = () => {
     <section id="brand-partners" className="py-24 bg-black-950 relative">
       {/* Gold liquid gradient background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-[35%] h-[40%] rounded-full blur-[120px] bg-gold-500/5 animate-float" style={{animationDuration: "20s"}}></div>
-        <div className="absolute bottom-1/3 left-1/4 w-[30%] h-[35%] rounded-full blur-[100px] bg-gold-500/5 animate-float" style={{animationDuration: "15s", animationDelay: "5s"}}></div>
+        <div className="absolute top-1/4 right-1/4 w-[35%] h-[40%] rounded-full blur-[120px] bg-gold-500/5 animate-blob" style={{animationDuration: "20s"}}></div>
+        <div className="absolute bottom-1/3 left-1/4 w-[30%] h-[35%] rounded-full blur-[100px] bg-gold-500/5 animate-blob" style={{animationDuration: "15s", animationDelay: "5s"}}></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
@@ -231,7 +291,7 @@ const BrandPartners = () => {
           </div>
         </div>
         
-        {/* Three-row Logo Carousel */}
+        {/* Three-row Logo Carousel - Now with smooth infinite scrolling */}
         <div className="mt-24 relative overflow-hidden">
           <h3 className="text-2xl md:text-3xl font-serif font-bold text-center mb-10">
             <span className="text-white">Our</span> <span className="gold-text">Collaborations</span>
@@ -242,7 +302,8 @@ const BrandPartners = () => {
             className="py-8 relative"
           >
             {/* Row 1 - Moves left to right */}
-            <div className="flex space-x-8 animate-marquee whitespace-nowrap">
+            <div className="flex space-x-8 animate-infinite-scroll whitespace-nowrap">
+              {/* First set of logos */}
               {GROUPED_LOGOS.slice(0, Math.ceil(GROUPED_LOGOS.length / 3)).map((group, index) => (
                 <div key={`row1-${index}`} className="flex space-x-8">
                   {group.map((brand, idx) => (
@@ -255,10 +316,24 @@ const BrandPartners = () => {
                   ))}
                 </div>
               ))}
+              {/* Duplicate set for seamless scrolling */}
+              {GROUPED_LOGOS.slice(0, Math.ceil(GROUPED_LOGOS.length / 3)).map((group, index) => (
+                <div key={`row1-dup-${index}`} className="flex space-x-8">
+                  {group.map((brand, idx) => (
+                    <div 
+                      key={`row1-dup-${index}-${idx}`} 
+                      className="flex items-center justify-center min-w-[150px] h-12 bg-black-900 border border-gold-500/20 rounded-lg px-4"
+                    >
+                      <span className="text-gold-500 text-sm font-medium truncate">{brand}</span>
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
             
             {/* Row 2 - Moves right to left */}
-            <div className="flex space-x-8 animate-marquee-reverse whitespace-nowrap mt-8">
+            <div className="flex space-x-8 animate-infinite-scroll-reverse whitespace-nowrap mt-8">
+              {/* First set of logos */}
               {GROUPED_LOGOS.slice(
                 Math.ceil(GROUPED_LOGOS.length / 3), 
                 Math.ceil(GROUPED_LOGOS.length / 3) * 2
@@ -274,10 +349,27 @@ const BrandPartners = () => {
                   ))}
                 </div>
               ))}
+              {/* Duplicate set for seamless scrolling */}
+              {GROUPED_LOGOS.slice(
+                Math.ceil(GROUPED_LOGOS.length / 3), 
+                Math.ceil(GROUPED_LOGOS.length / 3) * 2
+              ).map((group, index) => (
+                <div key={`row2-dup-${index}`} className="flex space-x-8">
+                  {group.map((brand, idx) => (
+                    <div 
+                      key={`row2-dup-${index}-${idx}`} 
+                      className="flex items-center justify-center min-w-[150px] h-12 bg-black-900 border border-gold-500/20 rounded-lg px-4"
+                    >
+                      <span className="text-gold-500 text-sm font-medium truncate">{brand}</span>
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
             
             {/* Row 3 - Moves left to right */}
-            <div className="flex space-x-8 animate-marquee whitespace-nowrap mt-8">
+            <div className="flex space-x-8 animate-infinite-scroll whitespace-nowrap mt-8">
+              {/* First set of logos */}
               {GROUPED_LOGOS.slice(
                 Math.ceil(GROUPED_LOGOS.length / 3) * 2
               ).map((group, index) => (
@@ -285,6 +377,21 @@ const BrandPartners = () => {
                   {group.map((brand, idx) => (
                     <div 
                       key={`row3-${index}-${idx}`} 
+                      className="flex items-center justify-center min-w-[150px] h-12 bg-black-900 border border-gold-500/20 rounded-lg px-4"
+                    >
+                      <span className="text-gold-500 text-sm font-medium truncate">{brand}</span>
+                    </div>
+                  ))}
+                </div>
+              ))}
+              {/* Duplicate set for seamless scrolling */}
+              {GROUPED_LOGOS.slice(
+                Math.ceil(GROUPED_LOGOS.length / 3) * 2
+              ).map((group, index) => (
+                <div key={`row3-dup-${index}`} className="flex space-x-8">
+                  {group.map((brand, idx) => (
+                    <div 
+                      key={`row3-dup-${index}-${idx}`} 
                       className="flex items-center justify-center min-w-[150px] h-12 bg-black-900 border border-gold-500/20 rounded-lg px-4"
                     >
                       <span className="text-gold-500 text-sm font-medium truncate">{brand}</span>
@@ -300,6 +407,9 @@ const BrandPartners = () => {
           <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black-950 to-transparent z-10"></div>
         </div>
       </div>
+      
+      {/* Separator line between sections */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gold-gradient opacity-30"></div>
     </section>
   );
 };

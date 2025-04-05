@@ -60,6 +60,20 @@ const PRESS_ARTICLES: Article[] = [
     publisher: "Digiday",
     image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1974&auto=format&fit=crop",
     link: "https://digiday.com/media/top-roblox-creators-dont-view-brand-deals-as-a-significant-revenue-stream/"
+  },
+  {
+    id: 8,
+    title: "NIVEA Enters the World of Roblox with Jung von Matt",
+    publisher: "Little Black Book",
+    image: "/lovable-uploads/a9798156-578b-4d7b-8a13-62978d6dc5b2.png",
+    link: "https://lbbonline.com/news/nivea-enters-the-world-of-roblox-with-jung-von-matt?utm_source=chatgpt.com"
+  },
+  {
+    id: 9,
+    title: "Hot Topic Heads Into the Metaverse With Halloween Initiative on 'Roblox'",
+    publisher: "License Global",
+    image: "/lovable-uploads/fddeeebf-c988-46a7-a24b-4b042095f4b5.png",
+    link: "https://www.licenseglobal.com/new-media-social/hot-topic-heads-into-the-metaverse-with-halloween-initiative-on-roblox"
   }
 ];
 
@@ -70,8 +84,8 @@ const Press = () => {
     <section id="press" className="py-24 bg-black-950 relative">
       {/* Gold liquid gradient background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-[10%] w-[45%] h-[50%] rounded-full blur-[120px] bg-gold-500/5 animate-float" style={{animationDuration: "15s"}}></div>
-        <div className="absolute bottom-1/3 -right-[5%] w-[40%] h-[40%] rounded-full blur-[100px] bg-gold-500/5 animate-float" style={{animationDuration: "20s", animationDelay: "2s"}}></div>
+        <div className="absolute top-1/4 -left-[10%] w-[45%] h-[50%] rounded-full blur-[120px] bg-gold-500/5 animate-blob" style={{animationDuration: "15s"}}></div>
+        <div className="absolute bottom-1/3 -right-[5%] w-[40%] h-[40%] rounded-full blur-[100px] bg-gold-500/5 animate-blob" style={{animationDuration: "20s", animationDelay: "2s"}}></div>
       </div>
     
       {/* Gold accent diagonal line */}

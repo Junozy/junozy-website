@@ -98,6 +98,21 @@
   }
 }
 
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
 @keyframes pulse {
   0% {
     opacity: 0.4;
@@ -117,6 +132,16 @@
 
 @keyframes marquee-reverse {
   from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes infinite-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - 2rem)); }
+}
+
+@keyframes infinite-scroll-reverse {
+  from { transform: translateX(calc(-100% - 2rem)); }
   to { transform: translateX(0); }
 }
 
@@ -140,6 +165,26 @@
   animation: marquee-reverse 40s linear infinite;
 }
 
+.animate-infinite-scroll {
+  animation: infinite-scroll 60s linear infinite;
+}
+
+.animate-infinite-scroll-reverse {
+  animation: infinite-scroll-reverse 60s linear infinite;
+}
+
 .animate-gradient-x {
   animation: gradient-x 3s ease infinite;
+}
+
+.animate-blob {
+  animation: blob 25s infinite alternate;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float 6s ease-in-out infinite reverse;
 }
