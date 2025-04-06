@@ -27,7 +27,7 @@ const CREATIONS: Creation[] = [
     title: "Blonde Popular Shoulder Braids",
     sales: "1,350,000+",
     created: "2021",
-    image: "https://tr.rbxcdn.com/0c5f0d0c1b6f9e1a1fe95d8137ce7b0e/420/420/Hat/Png",
+    image: "/images/braids.png",
     link: "https://www.roblox.com/catalog/7062036000/Blonde-Popular-Shoulder-Braids"
   },
   {
