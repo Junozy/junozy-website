@@ -146,7 +146,7 @@ const Contact = () => {
               
               <div className="flex space-x-4 mt-6">
                 <a 
-                  href="https://www.roblox.com/users/32958887/profile" 
+                  href="https://www.roblox.com/users/1335079524/profile" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full flex items-center justify-center border border-gold-500/30 hover:border-gold-500 hover:bg-black-800 transition-all group"
@@ -155,7 +155,7 @@ const Contact = () => {
                   <Box className="w-5 h-5 text-gold-500 group-hover:text-gold-400 transition-colors" />
                 </a>
                 <a 
-                  href="https://twitter.com/junozy_" 
+                  href="https://twitter.com/junozy_official" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full flex items-center justify-center border border-gold-500/30 hover:border-gold-500 hover:bg-black-800 transition-all group"
@@ -164,7 +164,7 @@ const Contact = () => {
                   <Twitter className="w-5 h-5 text-gold-500 group-hover:text-gold-400 transition-colors" />
                 </a>
                 <a 
-                  href="https://www.youtube.com/@Junozy/featured" 
+                  href="https://www.youtube.com/@JunozyOfficial" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full flex items-center justify-center border border-gold-500/30 hover:border-gold-500 hover:bg-black-800 transition-all group"
