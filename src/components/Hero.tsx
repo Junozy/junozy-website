@@ -52,15 +52,15 @@ const Hero = () => {
                 const target = e.target as HTMLVideoElement;
                 target.style.display = 'none';
                 const img = document.createElement('img');
-                img.src = '/images/junozy-logo.png';
+                img.src = '/images/JunozyLogoText.png';
                 img.className = 'w-full max-w-lg animate-fade-in mx-auto';
                 img.alt = 'JUNOZY';
                 target.parentNode?.appendChild(img);
               }}
             >
-              <source src="/images/junozy-logo.mp4" type="video/mp4" />
+              <source src="/images/JunozyAnimation - Alpha.mov" type="video/mp4" />
               <img 
-                src="/images/junozy-logo.png" 
+                src="/images/JunozyLogoText.png" 
                 alt="JUNOZY" 
                 className="w-full max-w-lg mx-auto"
               />
