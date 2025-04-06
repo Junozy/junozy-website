@@ -30,49 +30,49 @@ const PRESS_ARTICLES: Article[] = [
     id: 3,
     title: "Hot Topic brings goth fashion to Roblox",
     publisher: "Venturebeat",
-    image: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1950&auto=format&fit=crop",
+    image: "https://venturebeat.com/wp-content/uploads/2022/10/Pop-Up-Shop-Group-On-Roblox.png?w=750",
     link: "https://venturebeat.com/games/hot-topic-brings-goth-fashion-to-roblox/"
   },
   {
     id: 4,
     title: "The Recording Academy And MasterCard Are Bringing Grammy Week Into Roblox",
     publisher: "Forbes",
-    image: "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?q=80&w=1470&auto=format&fit=crop",
+    image: "https://imageio.forbes.com/specials-images/imageserve/624494b84e46e1925e31a3b8/A-series-of-events-related-to-The-Grammy-Awards-will-take-place-this-week-inside-of/1960x0.jpg?format=jpg&width=1440",
     link: "https://www.forbes.com/sites/martyswant/2022/03/30/the-recording-academy-and-mastercard-are-bringing-grammy-week-into-roblox/?sh=7d75baf66865"
   },
   {
     id: 5,
     title: "Insider Tips from a Roblox UGC Designer Who Has Sold 35 Million Items",
     publisher: "Max Power Gaming",
-    image: "https://images.unsplash.com/photo-1585620385456-4759f9b5c7d9?q=80&w=2670&auto=format&fit=crop",
+    image: "https://static.wixstatic.com/media/0a4a01_ad7c2e507fac42b89339281de9582261~mv2.png/v1/fill/w_740,h_416,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0a4a01_ad7c2e507fac42b89339281de9582261~mv2.png",
     link: "https://www.maxpowergaming.co/post/insider-tips-from-a-roblox-ugc-designer-who-has-sold-35-million-items"
   },
   {
     id: 6,
     title: "Walmart and Roblox are teaming up to make virtual e-commerce a reality",
     publisher: "Digiday",
-    image: "https://images.unsplash.com/photo-1607082349566-187342175e2f?q=80&w=2670&auto=format&fit=crop",
+    image: "https://digiday.com/wp-content/uploads/sites/3/2024/02/walmart-digiday.jpg?resize=1030,579",
     link: "https://digiday.com/marketing/walmart-and-roblox-are-teaming-up-to-make-virtual-e-commerce-a-reality/"
   },
   {
     id: 7,
     title: "Top Roblox creators don't view brand deals as a significant revenue stream",
     publisher: "Digiday",
-    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1974&auto=format&fit=crop",
+    image: "https://digiday.com/wp-content/uploads/sites/3/2023/06/receipt-cut-digiday.png?resize=1030,579",
     link: "https://digiday.com/media/top-roblox-creators-dont-view-brand-deals-as-a-significant-revenue-stream/"
   },
   {
     id: 8,
     title: "NIVEA Enters the World of Roblox with Jung von Matt",
     publisher: "Little Black Book",
-    image: "/lovable-uploads/a9798156-578b-4d7b-8a13-62978d6dc5b2.png",
+    image: "https://d3q27bh1u24u2o.cloudfront.net/news/NIVEA_L0FpIhQ.png",
     link: "https://lbbonline.com/news/nivea-enters-the-world-of-roblox-with-jung-von-matt?utm_source=chatgpt.com"
   },
   {
     id: 9,
     title: "Hot Topic Heads Into the Metaverse With Halloween Initiative on 'Roblox'",
     publisher: "License Global",
-    image: "/lovable-uploads/fddeeebf-c988-46a7-a24b-4b042095f4b5.png",
+    image: "https://eu-images.contentstack.com/v3/assets/blt8770191dea35bccc/blt96205de11999c399/64d3ec31f2896830ac54855f/HotTopicRoblox10722.png?width=1280&auto=webp&quality=95&format=jpg&disable=upscale",
     link: "https://www.licenseglobal.com/new-media-social/hot-topic-heads-into-the-metaverse-with-halloween-initiative-on-roblox"
   }
 ];
