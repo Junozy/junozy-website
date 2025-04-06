@@ -40,8 +40,8 @@ const Hero = () => {
             <video 
               ref={videoRef}
               src="/images/JunozyAnimation - Alpha.mov" 
-              poster="/images/JunozyLogoText.png"
-              className="w-full max-w-lg animate-fade-in opacity-0 mx-auto"
+              poster="/images/JunozyLogoText_NoLogo.png"
+              className="w-full max-w-2xl animate-fade-in opacity-0 mx-auto"
               style={{animationDelay: "0.3s"}}
               autoPlay
               muted
@@ -52,17 +52,17 @@ const Hero = () => {
                 const target = e.target as HTMLVideoElement;
                 target.style.display = 'none';
                 const img = document.createElement('img');
-                img.src = '/images/JunozyLogoText.png';
-                img.className = 'w-full max-w-lg animate-fade-in mx-auto';
+                img.src = '/images/JunozyLogoText_NoLogo.png';
+                img.className = 'w-full max-w-2xl animate-fade-in mx-auto';
                 img.alt = 'JUNOZY';
                 target.parentNode?.appendChild(img);
               }}
             >
               <source src="/images/JunozyAnimation - Alpha.mov" type="video/mp4" />
               <img 
-                src="/images/JunozyLogoText.png" 
+                src="/images/JunozyLogoText_NoLogo.png" 
                 alt="JUNOZY" 
-                className="w-full max-w-lg mx-auto"
+                className="w-full max-w-2xl mx-auto"
               />
             </video>
           </div>
