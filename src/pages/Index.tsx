@@ -16,14 +16,6 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Collections />
-      
-      {/* Divider line with fade-out effect on sides */}
-      <div className="w-full flex justify-center my-8">
-        <div className="w-full max-w-6xl px-8 relative">
-          <div className="h-[0.25px] bg-gradient-to-r from-transparent via-gold-500 to-transparent"></div>
-        </div>
-      </div>
-      
       <BrandPartners />
       <Press />
       <Contact />
