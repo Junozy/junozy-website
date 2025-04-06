@@ -16,14 +16,14 @@ const PRESS_ARTICLES: Article[] = [
     id: 1,
     title: "What teen brands can teach us about fashion in the metaverse",
     publisher: "Vogue Business",
-    image: "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=2670&auto=format&fit=crop",
+    image: "https://media.voguebusiness.com/photos/62a740c40e3f49cd1f63014d/2:3/w_2240,c_limit/teen-metaverse-voguebus-virtual-brands-group-june-22-story.jpg",
     link: "https://www.voguebusiness.com/technology/what-teen-brands-can-teach-us-about-fashion-in-the-metaverse"
   },
   {
     id: 2,
     title: "Not a Game: Walmart's Latest E-Commerce Platform Is Roblox",
     publisher: "Inc.",
-    image: "https://images.unsplash.com/photo-1607083206968-13611e3d76db?q=80&w=2215&auto=format&fit=crop",
+    image: "https://img-cdn.inc.com/image/upload/f_webp,c_fit,w_828,q_auto/images/panoramic/walmart-discovered-roblox-inc_540292_jqbsla.jpg",
     link: "https://www.inc.com/sydney-sladovnik/not-a-game-walmarts-latest-e-commerce-platform-is-robox.html"
   },
   {
