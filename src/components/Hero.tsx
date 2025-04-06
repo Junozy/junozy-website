@@ -39,8 +39,8 @@ const Hero = () => {
             {/* Replace with video if available, otherwise use static image */}
             <video 
               ref={videoRef}
-              src="/images/junozy-logo.mp4" 
-              poster="/images/junozy-logo.png"
+              src="/images/Junozy_Logo_WithSFX.mp4" 
+              poster="/images/JunozyLogoText.png"
               className="w-full max-w-lg animate-fade-in opacity-0 mx-auto"
               style={{animationDelay: "0.3s"}}
               autoPlay
