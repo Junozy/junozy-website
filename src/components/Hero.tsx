@@ -32,7 +32,7 @@ const Hero = () => {
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gold-gradient opacity-30"></div>
       
       {/* Content */}
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto relative z-10 px-0">
         <div className="flex flex-col items-center text-center max-w-6xl mx-auto">
           <div className="mb-12 relative">
             {/* Replace with video if available, otherwise use static image */}
