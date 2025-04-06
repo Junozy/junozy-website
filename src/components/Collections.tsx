@@ -20,7 +20,7 @@ const CREATIONS: Creation[] = [
     sales: "1,300,000+",
     created: "2020",
     image: "https://tr.rbxcdn.com/180DAY-0d3598cd3538501fc88e91de054c5bed/420/420/Hat/Webp/noFilter",
-    link: "https://www.roblox.com/catalog/5355719986/Strawberry-Cow-Hood"
+    link: "/images/cowhood.png"
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const CREATIONS: Creation[] = [
     title: "White Luxury Heart Purse",
     sales: "1,000,000+",
     created: "2022",
-    image: "https://tr.rbxcdn.com/3658f330b68894338f8e4593cbe6d5c3/420/420/Hat/Png",
+    image: "/images/heartpurse.png",
     link: "https://www.roblox.com/catalog/5355719986/Strawberry-Cow-Hood"
   },
   {
@@ -43,7 +43,7 @@ const CREATIONS: Creation[] = [
     title: "Luxury 1/1 Gold Bling",
     sales: "1",
     created: "2023",
-    image: "https://tr.rbxcdn.com/c8b8221d0e86e21c3b1474f5b1c06c8a/420/420/Hat/Png",
+    image: "/images/goldchain.png",
     link: "https://www.roblox.com/catalog/14835081494/Luxury-1-1-Gold-Bling",
     note: "ONLY 1 IN EXISTENCE"
   },
@@ -52,7 +52,7 @@ const CREATIONS: Creation[] = [
     title: "Black Baggy Cargo Pants w/ Shoes & Straps",
     sales: "TRENDING NOW",
     created: "2024",
-    image: "https://tr.rbxcdn.com/d935097b9caf05635e056861b2c56b47/420/420/Hat/Png",
+    image: "/images/cargopants.png",
     link: "https://www.roblox.com/catalog/73475435911852/Black-Baggy-Cargo-Pants-w-Shoes-Straps"
   }
 ];
