@@ -39,7 +39,7 @@ const Hero = () => {
             {/* Replace with video if available, otherwise use static image */}
             <video 
               ref={videoRef}
-              src="/images/Junozy_Logo_WithSFX.mp4" 
+              src="/images/JunozyAnimation - Alpha.mov" 
               poster="/images/JunozyLogoText.png"
               className="w-full max-w-lg animate-fade-in opacity-0 mx-auto"
               style={{animationDelay: "0.3s"}}
