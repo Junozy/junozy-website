@@ -26,46 +26,46 @@ const Hero = () => {
         animationDelay: "2s"
       }}></div>
       </div>
-      
+
       {/* Gold accent lines */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gold-gradient opacity-30"></div>
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gold-gradient opacity-30"></div>
-      
+
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center max-w-6xl mx-auto">
           <div className="mb-12 relative">
             {/* Replace with video if available, otherwise use static image */}
-            <video ref={videoRef} src="/images/JunozyAnimation - Alpha.mov" poster="/images/JunozyLogoText.png" className="w-full max-w-lg animate-fade-in opacity-0 mx-auto" style={{
+            <video ref={videoRef} src="./images/JunozyAnimation - Alpha.mov" poster="./images/JunozyLogoText.png" className="w-full max-w-lg animate-fade-in opacity-0 mx-auto" style={{
             animationDelay: "0.3s"
           }} autoPlay muted loop playsInline onError={e => {
             // Fallback to image if video fails
             const target = e.target as HTMLVideoElement;
             target.style.display = 'none';
             const img = document.createElement('img');
-            img.src = '/images/JunozyLogoText.png';
+            img.src = './images/JunozyLogoText.png';
             img.className = 'w-full max-w-lg animate-fade-in mx-auto';
             img.alt = 'JUNOZY';
             target.parentNode?.appendChild(img);
           }}>
-              <source src="/images/JunozyAnimation - Alpha.mov" type="video/mp4" />
-              <img src="/images/JunozyLogoText.png" alt="JUNOZY" className="w-full max-w-lg mx-auto" />
+              <source src="./images/JunozyAnimation - Alpha.mov" type="video/mp4" />
+              <img src="./images/JunozyLogoText.png" alt="JUNOZY" className="w-full max-w-lg mx-auto" />
             </video>
           </div>
-          
+
           <div className="animate-fade-up opacity-0" style={{
           animationDelay: "0.6s"
         }}>
             <button onClick={() => handleScroll('featured-creations')} className="relative inline-block px-6 py-3 font-sans text-sm font-medium uppercase tracking-wider text-black-950 overflow-hidden group">
               {/* Animated gradient background */}
               <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 group-hover:bg-gradient-to-l transition-all duration-500 ease-out bg-[length:200%_100%] group-hover:duration-1000 animate-gradient-x"></span>
-              
+
               {/* Glowing border effect */}
               <span className="absolute inset-0 w-full h-full border border-gold-500/50 group-hover:border-gold-500 opacity-70 group-hover:opacity-100 scale-105 group-hover:scale-100 rounded-sm transition-all duration-500"></span>
-              
+
               {/* Inner border animation */}
               <span className="absolute inset-[3px] border border-gold-400/30 rounded-none group-hover:border-gold-400/80 scale-100 group-hover:scale-105 transition-all duration-500"></span>
-              
+
               {/* Button text */}
               <span className="relative text-black-950 group-hover:text-black-950 font-bold transition-colors duration-200 ease-in-out">
                 Explore Creations
@@ -74,7 +74,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center animate-fade-in opacity-0" style={{
       animationDelay: "1.2s"
