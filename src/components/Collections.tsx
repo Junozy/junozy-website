@@ -36,7 +36,7 @@ const CREATIONS: Creation[] = [
     sales: "1,000,000+",
     created: "2022",
     image: "./images/heartpurse.png",
-    link: "https://www.roblox.com/catalog/5355719986/Strawberry-Cow-Hood"
+    link: "https://www.roblox.com/catalog/8715048013/White-Luxury-Heart-Purse-3-0"
   },
   {
     id: 4,
