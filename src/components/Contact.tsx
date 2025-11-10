@@ -41,10 +41,29 @@ const Contact = () => {
 
               <div className="text-white animate-fade-in opacity-0" style={{ animationDelay: "0.75s" }}>
                 <h3 className="text-2xl font-bold mb-4">Contact Details</h3>
-                <p className="text-gold-200 flex items-center space-x-2">
+                <p className="text-gold-200 flex items-center space-x-2 mb-4">
                   <Mail className="w-5 h-5 text-gold-500" />
                   <span>junozy.business@gmail.com</span>
                 </p>
+                <a
+                  href="mailto:junozy.business@gmail.com"
+                  className="relative inline-block px-6 py-3 font-sans text-sm font-medium uppercase tracking-wider text-black-950 overflow-hidden group"
+                >
+                  {/* Animated gradient background */}
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-gold-400 via-gold-500 to-gold-400 group-hover:bg-gradient-to-l transition-all duration-500 ease-out bg-[length:200%_100%] group-hover:duration-1000 animate-gradient-x"></span>
+                  
+                  {/* Glowing border effect */}
+                  <span className="absolute inset-0 w-full h-full border border-gold-500/50 group-hover:border-gold-500 opacity-70 group-hover:opacity-100 scale-105 group-hover:scale-100 rounded-sm transition-all duration-500"></span>
+                  
+                  {/* Inner border animation */}
+                  <span className="absolute inset-[3px] border border-gold-400/30 rounded-none group-hover:border-gold-400/80 scale-100 group-hover:scale-105 transition-all duration-500"></span>
+                  
+                  {/* Button text */}
+                  <span className="relative text-black-950 group-hover:text-black-950 font-bold transition-colors duration-200 ease-in-out flex items-center gap-2">
+                    <Mail className="w-4 h-4" />
+                    Send Email
+                  </span>
+                </a>
               </div>
 
               <div className="text-white animate-fade-in opacity-0" style={{ animationDelay: "0.9s" }}>
