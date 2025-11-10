@@ -1,5 +1,5 @@
 import React from "react";
-import { Twitter, Youtube, Mail, Gamepad2 } from "lucide-react";
+import { Twitter, Youtube, Mail, Gamepad2, Instagram } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const handleScroll = (id: string) => {
@@ -56,6 +56,9 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a href="https://x.com/Junozy_" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-gold-500 transition-colors" aria-label="Twitter">
                 <Twitter className="w-5 h-5" />
+              </a>
+              <a href="https://www.instagram.com/junozy_" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-gold-500 transition-colors" aria-label="Instagram">
+                <Instagram className="w-5 h-5" />
               </a>
               <a href="https://www.roblox.com/users/32958887/profile" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-gold-500 transition-colors" aria-label="Roblox">
                 <Gamepad2 className="w-5 h-5" />
