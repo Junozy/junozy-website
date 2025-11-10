@@ -46,8 +46,7 @@ const PRESS_ARTICLES: Article[] = [
     id: 5,
     title: "Insider Tips from a Roblox UGC Designer Who Has Sold 35 Million Items",
     publisher: "Max Power Gaming",
-    image:
-      "https://static.wixstatic.com/media/0a4a01_ad7c2e507fac42b89339281de9582261~mv2.png/v1/fill/w_740,h_416,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0a4a01_ad7c2e507fac42b89339281de9582261~mv2.png",
+    image: "https://pbs.twimg.com/media/FZbLX6rVUAA8EMY?format=jpg&name=large",
     link: "https://www.maxpowergaming.co/post/insider-tips-from-a-roblox-ugc-designer-who-has-sold-35-million-items",
   },
   {
