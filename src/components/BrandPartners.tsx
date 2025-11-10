@@ -443,7 +443,7 @@ const BrandPartners = () => {
 
           {/* Gradient overlays for seamless effect */}
           <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-black-950 to-transparent z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black-950 to-transparent z-10"></div>
+          <div className="absolute -right-8 top-0 bottom-0 w-32 bg-gradient-to-l from-black-950 to-transparent z-10"></div>
         </div>
       </div>
     </section>
