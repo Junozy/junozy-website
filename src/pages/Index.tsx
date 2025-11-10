@@ -8,10 +8,12 @@ import Press from '@/components/Press';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import FloatingElements from '@/components/FloatingElements';
+import MouseTrail from '@/components/MouseTrail';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-black-950">
+      <MouseTrail />
       <FloatingElements />
       <Navbar />
       <Hero />
