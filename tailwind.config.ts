@@ -161,6 +161,16 @@ export default {
 						'background-position': '100% 50%',
 					},
 				},
+				'twinkle': {
+					'0%, 100%': {
+						opacity: '0',
+						transform: 'scale(0.8)',
+					},
+					'50%': {
+						opacity: '1',
+						transform: 'scale(1)',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -172,6 +182,7 @@ export default {
 				'marquee': 'marquee 40s linear infinite',
 				'marquee-reverse': 'marquee-reverse 40s linear infinite',
 				'gradient-x': 'gradient-x 3s ease infinite',
+				'twinkle': 'twinkle 3s ease-in-out infinite',
 			},
 			backgroundImage: {
 				'gold-gradient': 'linear-gradient(to right, #E5A712, #FFDC73, #E5A712)', // Updated to match the logo

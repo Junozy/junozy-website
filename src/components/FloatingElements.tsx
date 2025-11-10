@@ -40,35 +40,35 @@ const FloatingElements = () => {
       {/* Small glowing sparks scattered throughout */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Top section sparks */}
-        <div className="absolute top-[10%] left-[15%] w-2 h-2 rounded-full bg-gold-400/60 blur-sm animate-pulse" style={{animationDuration: "3s"}}></div>
-        <div className="absolute top-[8%] left-[45%] w-1.5 h-1.5 rounded-full bg-gold-300/50 blur-sm animate-pulse" style={{animationDuration: "4s", animationDelay: "1s"}}></div>
-        <div className="absolute top-[15%] right-[20%] w-2 h-2 rounded-full bg-gold-500/70 blur-sm animate-pulse" style={{animationDuration: "3.5s", animationDelay: "0.5s"}}></div>
-        <div className="absolute top-[12%] right-[35%] w-1 h-1 rounded-full bg-gold-400/40 blur-sm animate-pulse" style={{animationDuration: "4.5s", animationDelay: "2s"}}></div>
+        <div className="absolute top-[10%] left-[15%] w-1.5 h-1.5 rotate-45 bg-gold-400/80 blur-[2px] animate-twinkle" style={{animationDuration: "3s"}}></div>
+        <div className="absolute top-[8%] left-[45%] w-1 h-1 rotate-45 bg-gold-300/70 blur-[2px] animate-twinkle" style={{animationDuration: "4s", animationDelay: "1s"}}></div>
+        <div className="absolute top-[15%] right-[20%] w-1.5 h-1.5 rotate-45 bg-gold-500/90 blur-[2px] animate-twinkle" style={{animationDuration: "3.5s", animationDelay: "0.5s"}}></div>
+        <div className="absolute top-[12%] right-[35%] w-0.5 h-0.5 rotate-45 bg-gold-400/60 blur-[2px] animate-twinkle" style={{animationDuration: "4.5s", animationDelay: "2s"}}></div>
         
         {/* Middle section sparks */}
-        <div className="absolute top-[35%] left-[10%] w-1.5 h-1.5 rounded-full bg-gold-300/50 blur-sm animate-pulse" style={{animationDuration: "3.8s", animationDelay: "1.5s"}}></div>
-        <div className="absolute top-[40%] left-[25%] w-2 h-2 rounded-full bg-gold-500/60 blur-sm animate-pulse" style={{animationDuration: "4.2s"}}></div>
-        <div className="absolute top-[38%] right-[15%] w-1 h-1 rounded-full bg-gold-400/45 blur-sm animate-pulse" style={{animationDuration: "3.3s", animationDelay: "2.5s"}}></div>
-        <div className="absolute top-[45%] right-[40%] w-1.5 h-1.5 rounded-full bg-gold-300/55 blur-sm animate-pulse" style={{animationDuration: "4s", animationDelay: "1s"}}></div>
-        <div className="absolute top-[42%] left-[50%] w-2 h-2 rounded-full bg-gold-500/50 blur-sm animate-pulse" style={{animationDuration: "3.6s", animationDelay: "0.8s"}}></div>
+        <div className="absolute top-[35%] left-[10%] w-1 h-1 rotate-45 bg-gold-300/70 blur-[2px] animate-twinkle" style={{animationDuration: "3.8s", animationDelay: "1.5s"}}></div>
+        <div className="absolute top-[40%] left-[25%] w-1.5 h-1.5 rotate-45 bg-gold-500/80 blur-[2px] animate-twinkle" style={{animationDuration: "4.2s"}}></div>
+        <div className="absolute top-[38%] right-[15%] w-0.5 h-0.5 rotate-45 bg-gold-400/65 blur-[2px] animate-twinkle" style={{animationDuration: "3.3s", animationDelay: "2.5s"}}></div>
+        <div className="absolute top-[45%] right-[40%] w-1 h-1 rotate-45 bg-gold-300/75 blur-[2px] animate-twinkle" style={{animationDuration: "4s", animationDelay: "1s"}}></div>
+        <div className="absolute top-[42%] left-[50%] w-1.5 h-1.5 rotate-45 bg-gold-500/70 blur-[2px] animate-twinkle" style={{animationDuration: "3.6s", animationDelay: "0.8s"}}></div>
         
         {/* Lower middle section sparks */}
-        <div className="absolute top-[55%] left-[20%] w-1 h-1 rounded-full bg-gold-400/40 blur-sm animate-pulse" style={{animationDuration: "4.5s", animationDelay: "2.2s"}}></div>
-        <div className="absolute top-[60%] left-[35%] w-1.5 h-1.5 rounded-full bg-gold-300/60 blur-sm animate-pulse" style={{animationDuration: "3.2s", animationDelay: "1.8s"}}></div>
-        <div className="absolute top-[58%] right-[25%] w-2 h-2 rounded-full bg-gold-500/55 blur-sm animate-pulse" style={{animationDuration: "4.8s"}}></div>
-        <div className="absolute top-[62%] right-[10%] w-1.5 h-1.5 rounded-full bg-gold-400/50 blur-sm animate-pulse" style={{animationDuration: "3.5s", animationDelay: "1.3s"}}></div>
+        <div className="absolute top-[55%] left-[20%] w-0.5 h-0.5 rotate-45 bg-gold-400/60 blur-[2px] animate-twinkle" style={{animationDuration: "4.5s", animationDelay: "2.2s"}}></div>
+        <div className="absolute top-[60%] left-[35%] w-1 h-1 rotate-45 bg-gold-300/80 blur-[2px] animate-twinkle" style={{animationDuration: "3.2s", animationDelay: "1.8s"}}></div>
+        <div className="absolute top-[58%] right-[25%] w-1.5 h-1.5 rotate-45 bg-gold-500/75 blur-[2px] animate-twinkle" style={{animationDuration: "4.8s"}}></div>
+        <div className="absolute top-[62%] right-[10%] w-1 h-1 rotate-45 bg-gold-400/70 blur-[2px] animate-twinkle" style={{animationDuration: "3.5s", animationDelay: "1.3s"}}></div>
         
         {/* Bottom section sparks */}
-        <div className="absolute top-[75%] left-[30%] w-2 h-2 rounded-full bg-gold-300/65 blur-sm animate-pulse" style={{animationDuration: "4s", animationDelay: "0.5s"}}></div>
-        <div className="absolute top-[80%] left-[12%] w-1 h-1 rounded-full bg-gold-500/45 blur-sm animate-pulse" style={{animationDuration: "3.7s", animationDelay: "2s"}}></div>
-        <div className="absolute top-[78%] right-[30%] w-1.5 h-1.5 rounded-full bg-gold-400/55 blur-sm animate-pulse" style={{animationDuration: "4.3s", animationDelay: "1.2s"}}></div>
-        <div className="absolute top-[85%] right-[18%] w-2 h-2 rounded-full bg-gold-300/50 blur-sm animate-pulse" style={{animationDuration: "3.9s"}}></div>
+        <div className="absolute top-[75%] left-[30%] w-1.5 h-1.5 rotate-45 bg-gold-300/85 blur-[2px] animate-twinkle" style={{animationDuration: "4s", animationDelay: "0.5s"}}></div>
+        <div className="absolute top-[80%] left-[12%] w-0.5 h-0.5 rotate-45 bg-gold-500/65 blur-[2px] animate-twinkle" style={{animationDuration: "3.7s", animationDelay: "2s"}}></div>
+        <div className="absolute top-[78%] right-[30%] w-1 h-1 rotate-45 bg-gold-400/75 blur-[2px] animate-twinkle" style={{animationDuration: "4.3s", animationDelay: "1.2s"}}></div>
+        <div className="absolute top-[85%] right-[18%] w-1.5 h-1.5 rotate-45 bg-gold-300/70 blur-[2px] animate-twinkle" style={{animationDuration: "3.9s"}}></div>
         
         {/* Additional scattered sparks */}
-        <div className="absolute top-[25%] left-[60%] w-1 h-1 rounded-full bg-gold-500/40 blur-sm animate-pulse" style={{animationDuration: "4.6s", animationDelay: "1.5s"}}></div>
-        <div className="absolute top-[50%] left-[8%] w-1.5 h-1.5 rounded-full bg-gold-400/60 blur-sm animate-pulse" style={{animationDuration: "3.4s", animationDelay: "0.7s"}}></div>
-        <div className="absolute top-[68%] left-[55%] w-2 h-2 rounded-full bg-gold-300/45 blur-sm animate-pulse" style={{animationDuration: "4.1s", animationDelay: "2.3s"}}></div>
-        <div className="absolute top-[90%] left-[45%] w-1 h-1 rounded-full bg-gold-500/55 blur-sm animate-pulse" style={{animationDuration: "3.8s", animationDelay: "1.6s"}}></div>
+        <div className="absolute top-[25%] left-[60%] w-0.5 h-0.5 rotate-45 bg-gold-500/60 blur-[2px] animate-twinkle" style={{animationDuration: "4.6s", animationDelay: "1.5s"}}></div>
+        <div className="absolute top-[50%] left-[8%] w-1 h-1 rotate-45 bg-gold-400/80 blur-[2px] animate-twinkle" style={{animationDuration: "3.4s", animationDelay: "0.7s"}}></div>
+        <div className="absolute top-[68%] left-[55%] w-1.5 h-1.5 rotate-45 bg-gold-300/65 blur-[2px] animate-twinkle" style={{animationDuration: "4.1s", animationDelay: "2.3s"}}></div>
+        <div className="absolute top-[90%] left-[45%] w-0.5 h-0.5 rotate-45 bg-gold-500/75 blur-[2px] animate-twinkle" style={{animationDuration: "3.8s", animationDelay: "1.6s"}}></div>
       </div>
     </div>
   );
