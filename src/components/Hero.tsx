@@ -36,9 +36,14 @@ const Hero = () => {
         <div className="flex flex-col items-center text-center max-w-6xl mx-auto">
           <div className="mb-12 relative">
             {/* Replace with video if available, otherwise use static image */}
-            <img src="/images/JunozyLogoText_NoLogo.png" alt="JUNOZY" className="w-full max-w-lg animate-fade-in opacity-0 mx-auto" style={{
-            animationDelay: "0.3s"
-          }} />
+            <img 
+              src="/images/JunozyLogoText_NoLogo.png" 
+              alt="JUNOZY" 
+              className="w-full max-w-lg animate-fade-in opacity-0 mx-auto drop-shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:drop-shadow-[0_0_40px_rgba(212,175,55,0.6)] animate-float transition-all duration-300" 
+              style={{
+                animationDelay: "0.3s"
+              }} 
+            />
           </div>
           
           <div className="animate-fade-up opacity-0" style={{
