@@ -36,7 +36,7 @@ const Hero = () => {
         <div className="flex flex-col items-center text-center max-w-6xl mx-auto">
           <div className="mb-12 relative">
             {/* Replace with video if available, otherwise use static image */}
-            <img src="/images/JunozyLogoText_NoLogo.png" alt="JUNOZY" className="w-full max-w-lg animate-fade-in opacity-0 mx-auto" style={{
+            <img src="/images/JunozyLogoText_NoLogo.png" alt="JUNOZY" className="w-full max-w-lg animate-fade-in animate-logo-glow opacity-0 mx-auto" style={{
             animationDelay: "0.3s"
           }} />
           </div>
