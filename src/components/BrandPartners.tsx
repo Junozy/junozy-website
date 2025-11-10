@@ -185,6 +185,7 @@ const GROUPED_LOGOS = (() => {
 const BrandPartners = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
   const carouselRef = useRef<HTMLDivElement>(null);
   const logoCarouselRef = useRef<HTMLDivElement>(null);
 
@@ -209,6 +210,18 @@ const BrandPartners = () => {
 
     return () => clearInterval(interval);
   }, [autoplay]);
+
+  // Handle horizontal scroll on logo carousel
+  const handleLogoScroll = (e: React.WheelEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    if (logoCarouselRef.current) {
+      logoCarouselRef.current.scrollLeft += e.deltaY;
+      setIsPaused(true);
+      
+      // Resume animation after 2 seconds of no scrolling
+      setTimeout(() => setIsPaused(false), 2000);
+    }
+  };
 
   return (
     <section id="brand-partners" className="py-24 bg-black-950 relative">
@@ -345,9 +358,14 @@ const BrandPartners = () => {
             <span className="text-white">Our</span> <span className="gold-text">Partners</span>
           </h3>
 
-          <div ref={logoCarouselRef} className="py-8 relative">
+          <div 
+            ref={logoCarouselRef} 
+            className="py-8 relative overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
+            onWheel={handleLogoScroll}
+            style={{ scrollBehavior: 'smooth' }}
+          >
             {/* Row 1 - Moves left to right */}
-            <div className="flex space-x-8 animate-infinite-scroll whitespace-nowrap">
+            <div className={cn("flex space-x-8 whitespace-nowrap", !isPaused && "animate-infinite-scroll")}>
               {/* First set of logos */}
               {GROUPED_LOGOS.slice(0, Math.ceil(GROUPED_LOGOS.length / 3)).map((group, index) => (
                 <div key={`row1-${index}`} className="flex space-x-8">
@@ -377,7 +395,7 @@ const BrandPartners = () => {
             </div>
 
             {/* Row 2 - Moves right to left */}
-            <div className="flex space-x-8 animate-infinite-scroll-reverse whitespace-nowrap mt-8">
+            <div className={cn("flex space-x-8 whitespace-nowrap mt-8", !isPaused && "animate-infinite-scroll-reverse")}>
               {/* First set of logos */}
               {GROUPED_LOGOS.slice(Math.ceil(GROUPED_LOGOS.length / 3), Math.ceil(GROUPED_LOGOS.length / 3) * 2).map(
                 (group, index) => (
@@ -411,7 +429,7 @@ const BrandPartners = () => {
             </div>
 
             {/* Row 3 - Moves left to right */}
-            <div className="flex space-x-8 animate-infinite-scroll whitespace-nowrap mt-8">
+            <div className={cn("flex space-x-8 whitespace-nowrap mt-8", !isPaused && "animate-infinite-scroll")}>
               {/* First set of logos */}
               {GROUPED_LOGOS.slice(Math.ceil(GROUPED_LOGOS.length / 3) * 2).map((group, index) => (
                 <div key={`row3-${index}`} className="flex space-x-8">
