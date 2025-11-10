@@ -15,8 +15,7 @@ const PRESS_ARTICLES: Article[] = [
     id: 1,
     title: "What teen brands can teach us about fashion in the metaverse",
     publisher: "Vogue Business",
-    image:
-      "https://media.voguebusiness.com/photos/62a740c40e3f49cd1f63014d/2:3/w_2240,c_limit/teen-metaverse-voguebus-virtual-brands-group-june-22-story.jpg",
+    image: "https://imgur.com/a/MQv40Ye",
     link: "https://www.voguebusiness.com/technology/what-teen-brands-can-teach-us-about-fashion-in-the-metaverse",
   },
   {
