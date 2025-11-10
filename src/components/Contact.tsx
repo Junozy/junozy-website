@@ -1,5 +1,5 @@
 import React from "react";
-import { Twitter, Youtube, Mail, Box } from "lucide-react";
+import { Twitter, Youtube, Mail, Box, Instagram } from "lucide-react";
 
 const Contact = () => {
 
@@ -80,6 +80,15 @@ const Contact = () => {
                   aria-label="Roblox"
                 >
                   <Box className="w-5 h-5 text-gold-500 group-hover:text-gold-400 transition-colors" />
+                </a>
+                <a
+                  href="https://www.instagram.com/junozy_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full flex items-center justify-center border border-gold-500/30 hover:border-gold-500 hover:bg-black-800 transition-all group"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-5 h-5 text-gold-500 group-hover:text-gold-400 transition-colors" />
                 </a>
                 <a
                   href="https://twitter.com/junozy_"
