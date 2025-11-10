@@ -15,7 +15,7 @@ const PRESS_ARTICLES: Article[] = [
     id: 1,
     title: "What teen brands can teach us about fashion in the metaverse",
     publisher: "Vogue Business",
-    image: "https://imgur.com/a/MQv40Ye",
+    image: "/images/press-vogue-roblox.png",
     link: "https://www.voguebusiness.com/technology/what-teen-brands-can-teach-us-about-fashion-in-the-metaverse",
   },
   {
