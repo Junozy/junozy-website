@@ -87,15 +87,6 @@
   .bg-gradient-radial {
     background-image: radial-gradient(var(--tw-gradient-stops));
   }
-  
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 @keyframes fadeIn {
