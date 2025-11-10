@@ -1,19 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 
-interface TrailParticle {
+interface TrailPoint {
   x: number;
   y: number;
-  opacity: number;
-  size: number;
-  id: number;
+  age: number;
 }
 
 const MouseTrail = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const particlesRef = useRef<TrailParticle[]>([]);
-  const mouseRef = useRef({ x: 0, y: 0 });
+  const trailPointsRef = useRef<TrailPoint[]>([]);
   const animationRef = useRef<number>();
-  const lastTimeRef = useRef<number>(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -31,61 +27,65 @@ const MouseTrail = () => {
     window.addEventListener('resize', resizeCanvas);
 
     const handleMouseMove = (e: MouseEvent) => {
-      mouseRef.current = { x: e.clientX, y: e.clientY };
+      trailPointsRef.current.push({
+        x: e.clientX,
+        y: e.clientY,
+        age: 0
+      });
+
+      // Limit trail length
+      if (trailPointsRef.current.length > 30) {
+        trailPointsRef.current.shift();
+      }
     };
 
     window.addEventListener('mousemove', handleMouseMove);
 
-    let particleId = 0;
+    const animate = () => {
+      // Clear canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    const animate = (currentTime: number) => {
-      const deltaTime = currentTime - lastTimeRef.current;
-      
-      if (deltaTime > 16) { // ~60fps
-        lastTimeRef.current = currentTime;
+      if (trailPointsRef.current.length < 2) {
+        animationRef.current = requestAnimationFrame(animate);
+        return;
+      }
 
-        // Clear canvas
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Age all points
+      trailPointsRef.current = trailPointsRef.current.filter(point => {
+        point.age += 1;
+        return point.age < 30;
+      });
 
-        // Add new particle at mouse position
-        particlesRef.current.push({
-          x: mouseRef.current.x,
-          y: mouseRef.current.y,
-          opacity: 1,
-          size: 15,
-          id: particleId++
-        });
+      // Draw smooth line through points
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
 
-        // Update and draw particles
-        particlesRef.current = particlesRef.current.filter(particle => {
-          particle.opacity -= 0.02;
-          particle.size *= 0.98;
+      for (let i = 0; i < trailPointsRef.current.length - 1; i++) {
+        const point = trailPointsRef.current[i];
+        const nextPoint = trailPointsRef.current[i + 1];
+        
+        // Calculate opacity based on age
+        const opacity = 1 - (point.age / 30);
+        
+        // Gradient from current point to next
+        const gradient = ctx.createLinearGradient(
+          point.x, point.y,
+          nextPoint.x, nextPoint.y
+        );
 
-          if (particle.opacity <= 0) return false;
+        const nextOpacity = 1 - (nextPoint.age / 30);
+        
+        // Golden gradient
+        gradient.addColorStop(0, `rgba(251, 191, 36, ${opacity * 0.7})`);
+        gradient.addColorStop(1, `rgba(245, 158, 11, ${nextOpacity * 0.7})`);
 
-          // Create gradient
-          const gradient = ctx.createRadialGradient(
-            particle.x, particle.y, 0,
-            particle.x, particle.y, particle.size
-          );
+        ctx.strokeStyle = gradient;
+        ctx.lineWidth = 3 * opacity;
 
-          // Golden gradient using opacity
-          gradient.addColorStop(0, `rgba(251, 191, 36, ${particle.opacity * 0.8})`); // gold-400
-          gradient.addColorStop(0.5, `rgba(245, 158, 11, ${particle.opacity * 0.5})`); // gold-500
-          gradient.addColorStop(1, `rgba(217, 119, 6, ${particle.opacity * 0.1})`); // gold-600
-
-          ctx.fillStyle = gradient;
-          ctx.beginPath();
-          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-          ctx.fill();
-
-          return true;
-        });
-
-        // Limit particles
-        if (particlesRef.current.length > 50) {
-          particlesRef.current = particlesRef.current.slice(-50);
-        }
+        ctx.beginPath();
+        ctx.moveTo(point.x, point.y);
+        ctx.lineTo(nextPoint.x, nextPoint.y);
+        ctx.stroke();
       }
 
       animationRef.current = requestAnimationFrame(animate);
