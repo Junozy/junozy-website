@@ -4,6 +4,8 @@ import { Box } from "lucide-react";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showLogo, setShowLogo] = useState(false);
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -11,7 +13,16 @@ const Navbar = () => {
       } else {
         setIsScrolled(false);
       }
+      
+      // Check if we've scrolled past the hero section
+      const featuredSection = document.getElementById("featured-creations");
+      if (featuredSection) {
+        const rect = featuredSection.getBoundingClientRect();
+        // Show logo when Featured Creations section reaches the top of viewport
+        setShowLogo(rect.top <= 100);
+      }
     };
+    handleScroll(); // Check initial position
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -34,7 +45,14 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="/" className="flex items-center">
-          <img alt="JUNOZY" className="h-10 md:h-12" src="/images/JunozyLogoText_NoLogo.png" />
+          <img 
+            alt="JUNOZY" 
+            className={cn(
+              "h-10 md:h-12 transition-opacity duration-500",
+              showLogo ? "opacity-100" : "opacity-0"
+            )} 
+            src="/images/JunozyLogoText_NoLogo.png" 
+          />
         </a>
 
         {/* Mobile menu button */}
